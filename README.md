@@ -1,2 +1,1 @@
-# Labs\_PSTU\_Andrey\_Belov\_Denisovich\_Informatika
-
+# Labs\_PSTU\_Belov\_Andrey\_Denisovich
