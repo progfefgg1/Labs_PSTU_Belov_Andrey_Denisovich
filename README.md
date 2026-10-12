@@ -1,2 +1,2 @@
-# Labs_PSTU_-_-_-
-WarThunderIsTheWorstGameForEver
+# Labs\_PSTU\_Andrey\_Belov\_Denisovich\_Informatika
+
