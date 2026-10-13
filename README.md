@@ -9,4 +9,4 @@
 | 1 | Лабораторная 1 | 13.10.26 | Готово |
 | 2 | Лабораторная 2 | 13.10.26 | Готово |
 
-![Мой кот](https://disk.yandex.ru/i/AmDzGbYmSeUOfQ)
+![Мой кот](https://drive.google.com/file/d/1Atgp3ClEL6Uwe3UHIA3ADgCiocd2GQ_C/view?usp=sharing)
