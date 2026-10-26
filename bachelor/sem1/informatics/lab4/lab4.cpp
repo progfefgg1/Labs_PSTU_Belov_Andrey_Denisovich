@@ -1,59 +1,79 @@
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
 int main()
 {
-    const int n = 20;
-    int arr[n];
+    const int N = 100;
+    int arr[N];
     int NumToDelete;
+    const int NewN = N - 1;
+    int NewArr[NewN];
+    const int NewNewN = N;
+    int NewNewArr[NewNewN];
+    int EvenIndex;
+    srand(time(0));
 
-    srand(time(nullptr));
-
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < N; i++)
     {
         arr[i] = rand() % 100;
     }
 
-    for (int i = 0; i < n; i++)
+    cout << "Our massive: ";
+    for (int i = 0; i < N; i++)
     {
-            cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
 
-    cout << "\n" << "what do u want to delete? ";
+    // delete number
+    cout << "\n" << "What do u want to delete? (tell me index): ";
     cin >> NumToDelete;
 
-    for (int i = NumToDelete - 1; i < n - 1; i++)
+    for (int i = 0; i < NewN; i++) 
     {
-         arr[i] = arr[i + 1];
-    }
-    
-    int even_num = -1;
-    
-    for (int i = 0; i < n; i++) 
-    {
-        if (arr[i] % 2 == 0) 
+        if (i < NumToDelete) 
         {
-            even_num = i;
+            NewArr[i] = arr[i];
+        } 
+        else 
+        {
+            NewArr[i] = arr[i + 1];
+        }
+    }
+
+    for (int i = 0; i < NewN; i++) 
+    {
+        if (NewArr[i] % 2 == 0) 
+        {
+            EvenIndex = i;
             break;
         }
     }
 
-    
-    for (int i = NumToDelete; i > even_num + 1; i--) 
+    for (int i = 0; i < NewNewN; i++)
     {
-        arr[i] = arr[i - 1];
+        if (i <= EvenIndex)
+        {
+            NewNewArr[i] = NewArr[i];
+        }
+        else if (i == EvenIndex + 1)
+        {
+            NewNewArr[i] = NewArr[EvenIndex - 1] + 2;
+        }
+        else
+        {
+            NewNewArr[i] = NewArr[i - 1];
+        }
+        
     }
-    arr[even_num + 1] = arr[even_num] + 2;
-    NumToDelete++;
-    ;
 
-    for (int i = 0; i < n; i++)
+    cout << "\n" << "Our massive: ";
+    for (int i = 0; i < NewNewN; i++)
     {
-            cout << arr[i] << " ";
+        cout << NewNewArr[i] << " ";
     }
-
 
     return 0;
 }

@@ -20,7 +20,7 @@ int main()
         Y = pow(e, x * cos(pi / 4)) * cos(x * sin(pi / 4));
 
         for (int i = 1; i <= n; i++)
-        {
+        {`
             term *= x / i;
             SN += cos(i * pi / 4.0) * term;
         }
